@@ -5,6 +5,7 @@
 
 trigger:
 - master
+name: $(date:yyyyMMdd)$(rev:.r)
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -20,3 +21,4 @@ steps:
     npm run build
     npm test
   displayName: 'npm install, build and test'
+
